@@ -1,0 +1,33 @@
+import db data (MySQL needs to be installed and running as a service):
+
+in Github (download file):
+- go to the folder of the database that you want to import (should be in VM SQL Server)
+- click on the most recent .sql file
+- click on the button "Raw"
+- right-click and click "Save Page As..."
+- choose the download location, name the file, and write ".sql" at the end, e.g. "db.sql"
+- click "Save" and the file should be at the chosen location
+
+
+in MySQL Workbench:
+- connect to your pc's sql server
+- create a db/schema called "helping_hand"
+- go to "Server" tab
+- click "Data Import"
+- click "Import from Self-Contained File"
+- find and choose the .sql file to import
+- below on "Default Target Schema" select "helping_hand"
+- click "Start Import"
+- if necessary, refresh your schemas
+- the imported db contents should be in the schema "helping_hand"
+
+
+in console - Windows:
+- in your C: drive, search for "mysql.exe"
+- in console type "cd" and write the full directory to mysql.exe, e.g. "cd C:\Program Files\MySQL\MySQL Server 8.0\bin"
+- log in to your sql server using "mysql.exe -u<username> -p", where <username> is your sql server username
+- enter your password if you have one
+- create a db/schema called "helping_hand"
+- type "use helping_hand;"
+- type "source" followed by the full directory to the downloaded .sql file including the file name and format, e.g. "source C:\Users\YourName\Downloads\db.sql" (no ; at the end)
+- the imported db contents should now be in your local server

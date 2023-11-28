@@ -1,0 +1,20 @@
+export db data (MySQL needs to be installed and running as a service):
+
+in MySQL Workbench:
+- connect to your pc's sql server
+- go to "Server" tab
+- click "Data Export"
+- select the db that you want to export
+- select "Export to Self-Contained File" and choose the location
+- click "Start Export"
+- the .sql file should be at the chosen location
+
+
+in console - Windows:
+- in your C: drive, search for "mysql.exe"
+- in console type "cd" and write the full directory to mysql.exe, e.g. "cd C:\Program Files\MySQL\MySQL Server 8.0\bin"
+- type "mysqldump -u<username> -p helping_hand > "<full directory of where you want to store the file + file name and format>"", e.g. mysqldump -uroot -p helping_hand > "C:\Users\YourName\Desktop\exportDB.sql"
+- enter your password if you have one
+- the .sql file should be at the chosen location
+
+- you can now upload the db to its designated Github folder in VM SQL Server

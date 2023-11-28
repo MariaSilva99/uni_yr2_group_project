@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../static/Latest Causes/causes.css" th:href="@{/Latest Causes/causes.css}"/>
+    <link rel="shortcut icon" type="image/png" th:href="@{hand.png}">
+    <link rel="icon" type="image/png" href="../hand.png">
+
+    <title>Helping Hand - Latest Events</title>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md fixed top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Helping Hand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href=" mailto:1842579@brunel.ac.uk">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/userLogin">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</header>
+<main>
+    <br>
+  <h1>Latest Events</h1>
+    <br>
+  <div class="card-deck">
+    <div class="card">
+      <img class="card-img-top" src="../../static/Latest Events/cyclingevent.jpg" th:src="@{/Latest Events/cyclingevent.jpg}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Cycling For  Charity</h5>
+        <p class="card-text">"Join Us on a Cycling Marathon to fundraise for research towards Ovarian Cancer"</p></b>
+        <p class="card-text">Location: Manchester, M13 9PL</p>
+          <p class="card-text"> Date and Time: at 13:00 pm on the 01/07/2021</p>
+      </div>
+      <button type="button" class="btn btn-primary">Click here for more info</button>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 3 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../../static/Latest Events/bake-table.jpg" th:src="@{/Latest Events/bake-table.jpg}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">London Bake Sale</h5>
+        <p class="card-text">"Bake Sale for Birmingham Childrens Hospital- Come, Enjoy and Support our children by participating in our event now"</p>
+        <p class="card-text"><Label>Location: Birmingham, B4 6NH</Label></p>
+          <p class="card-text"> Date and Time: at 09:00 am on the 20/08/2021</p>
+      </div>
+      <button type="button" class="btn btn-primary">Click here for more info</button>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 7 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../../static/Latest Events/renewable-summit.jpg" th:src="@{/Latest Events/renewable-summit.jpg}"  alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Renewable Energy Summit</h5>
+        <p class="card-text">"Join and attend our Summit where a variety of entrepreneurs have the opportunity to showcase and present their ideas and inventions for the renewable energy movement"</p>
+        <p class="card-text">Location: London, SW1V 3JD </p>
+          <p class="card-text"> Date and Time: at 13:00 pm on the 15/08/2021</p>
+      </div>
+      <button type="button" class="btn btn-primary">Click here for more info</button>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 21 mins ago</small>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="../../static/Latest Events/food-bank-covid.jpg" th:src="@{/Latest Events/food-bank-covid.jpg}"  alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Food Bank For the Homeless</h5>
+        <p class="card-text">"Volunteer and help with our upcoming food bank to help homeless people in our local area"</p>
+        <p class="card-text">Location: London: GU16 7HF </p>
+          <p class="card-text"> Date and Time: at 13:00 pm on the 10/06/2021</p>
+      </div>
+      <button type="button" class="btn btn-primary">Click here for more info</button>
+      <div class="card-footer">
+        <small class="text-muted">Last updated 53 mins ago</small>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</main>
+</body>
+</html>

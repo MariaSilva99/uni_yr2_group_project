@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <!-- Required meta tags -->
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+
+    <title>Helping hand - Login</title>
+    <!-- stylesheets-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../static/Login Page/newLogin.css" th:href="@{/Login Page/newLogin.css}"/>
+    <link rel="shortcut icon" type="image/png" th:href="@{hand.png}">
+    <link rel="icon" type="image/png" href="../hand.png">
+
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md fixed top navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Helping Hand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="/home">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:1842579@brunel.ac.uk">Contact us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/userLogin">Log in<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <!-- <link href="signin.css" rel="stylesheet"> -->
+</header>
+
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <main>
+
+                    <!-- Thymleaf action / post for HTML form submission-->
+                    <form action="#"  th:action="@{/submit}" method="post" th:object="${user}">
+                        <h2 class="h3 mb-3 fw-normal text-center">Login</h2>
+                        <br>
+                        <div class="form-group">
+                            <label for="inputEmail4">Email</label>
+                            <!-- Specifying corresponding variables for form/model-->
+                            <input type="email" th:field="*{email}" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword4">Password</label>
+                            <!-- Specifying corresponding variables for form/model-->
+                            <input type="password" th:field="*{password}" class="form-control" id="inputPassword4" placeholder="Password">
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+
+                        <div>
+                            <span th:if="${notUser != null}" class="error" style="color:red">You don't seem to have an account with us. Please register first.</span>
+                            <br>
+                            <span th:if="${logError != null}" class="error" style="color:red">Incorrect password. Please try again.</span>
+                            <br>
+                        </div>
+
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
+
+                        <p class="mt-5 mb-3 text-muted">&copy; Helping Hand 2021</p>
+                    </form>
+                </main>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- </body> -->
+    <!-- </header> -->
+<!--    <script>
+        function myFunction() {
+            alert("The form was submitted");
+        }
+    </script>-->
+</body>
+
+
+
+</html>

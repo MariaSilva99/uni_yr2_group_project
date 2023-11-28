@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <title>Helping hand - Register</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="newLogin.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="hand.png">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md fixed top navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Helping Hand</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="index.html">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Aboutuspage.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:1842579@brunel.ac.uk">Contact us</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="Loginpage.html">Log in</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Registrationpage.html">Register<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <!-- <link href="signin.css" rel="stylesheet"> -->
+    </header>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <main>
+
+                    <form action="../../eclipse-workspace/JavaDB/src/database/SampleServlet2.java" method=post
+                        onsubmit="myFunction()"
+                        oninput='up2.setCustomValidity(up2.value != up.value ? "Passwords do not match." : "")'>
+                        <h2 class="h3 mb-3 fw-normal text-center">Register an Account</h2>
+
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" name="firstName"
+                                placeholder="First name" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" name="lastName"
+                                placeholder="Last Name" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">User Name</label>
+                            <input type="text" class="form-control" id="userName" name="username" placeholder="Username"
+                                required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email"
+                                required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="role" class="visually-hidden">Role</label>
+                            <select class="form-control" name="role" id="role">
+                                <option value="SPO">Sponsor</option>
+                                <option value="STA">Start-up</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" name="password"
+                                placeholder="Password" required autofocus>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword"> Confirm Password</label>
+                            <input type="password" class="form-control" id="inputPassword"
+                                placeholder="Confirm Password" name="password" required autofocus>
+                        </div>
+
+
+
+
+                        <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+
+                        <p class="mt-5 mb-3 text-muted">&copy; Helping Hand 2021</p>
+                    </form>
+                </main>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function myFunction() {
+            alert("The form was submitted");
+        }
+
+    </script>
+</body>
+
+
+
+</html>

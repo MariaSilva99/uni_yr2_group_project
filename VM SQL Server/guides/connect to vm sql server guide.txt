@@ -1,0 +1,42 @@
+connect to VM SQL Server:
+
+- make sure you are either connected to Brunel's VPN or using the Horizon VM.
+- note: Horizon VM doesn't have MySQL installed, therefore you can only use it to work directly with the Azure server from the command line.
+- you won't be able to import or export databases using Horizon VM, only on a machine with MySQL installed - but you won't need to anyway.
+
+
+in MySQL Workbench:
+- click "+" next to MySQL Connections
+- give the connection a name
+- in hostname, write "172.31.82.102" (VM's IP), port should be "3306" and username "root" by default
+- click on "Store in Vault..." and enter "CSgroup12!"
+- click "OK"
+- a connection to the VM SQL server should have been created
+- click on it to access the server (this connection will be saved for future uses)
+
+
+in MySQL Shell:
+- write the following commands:
+  - \connect root@172.31.82.102
+  - \CSgroup12!
+  - (i believe it asks you if you want to save the password here - accept it)
+  - \sql
+- you can now write your queries
+
+- to disconnect and exit write:
+  - \js
+  - \disconnect
+  - \quit
+
+
+in console - Windows:
+- write the following commands:
+  - ssh root@172.31.82.102
+  - (it will ask you if you are sure that you want to continue - type "yes")
+  - CSgroup12!
+  - (you should be inside the VM now)
+  - mysql -u root -p
+  - CSgroup12!
+- you can now write your queries
+
+- to disconnect and exit enter "exit" 3 times
