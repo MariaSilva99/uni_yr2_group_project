@@ -48,7 +48,7 @@ public class RegisterController {
         //with current data
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://172.31.82.102:3306/helping_hand", "root", "CSgroup12!");
+            Connection con = DriverManager.getConnection("jdbc:mysql://address/helping_hand", "un", "pw");
             Statement stmt = con.createStatement();
             String SQL = "SELECT * FROM users WHERE email='" + user.getEmail() + "'";
             ResultSet rs = stmt.executeQuery(SQL);
