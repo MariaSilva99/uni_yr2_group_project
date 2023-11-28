@@ -30,7 +30,7 @@ public class LoginController {
     public String submit(@ModelAttribute("user") User user, Model model) {
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://172.31.82.102:3306/helping_hand", "root", "CSgroup12!");
+            Connection con = DriverManager.getConnection("jdbc:mysql://address/helping_hand", "un", "pw");
             Statement stmt = con.createStatement();
             String SQL = "SELECT * FROM users WHERE email='" + user.getEmail() + "' AND password='" + user.getPassword() + "'";
             ResultSet rs = stmt.executeQuery(SQL);
@@ -41,7 +41,7 @@ public class LoginController {
             else {
                 try
                 {
-//                    Connection con1 = DriverManager.getConnection("jdbc:mysql://172.31.82.102:3306/helping_hand", "root", "CSgroup12!");
+//                    Connection con1 = DriverManager.getConnection("jdbc:mysql://address/helping_hand", "un", "pw");
                     Statement stmt1 = con.createStatement();
                     String SQL1 = "SELECT * FROM users WHERE email='" + user.getEmail() + "'";
                     ResultSet rs1 = stmt1.executeQuery(SQL1);
